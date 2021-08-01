@@ -1,5 +1,5 @@
 import io
-# from flask_ngrok import run_with_ngrok
+from flask_ngrok import run_with_ngrok
 from flask import Flask, jsonify, request
 import torch
 from PIL import Image
@@ -46,5 +46,5 @@ def predict():
         return jsonify({'class_name': class_name})
 
 if __name__ == '__main__':
-    # run_with_ngrok(app)
+    run_with_ngrok(app)
     app.run()
